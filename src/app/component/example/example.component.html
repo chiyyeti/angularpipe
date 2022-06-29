@@ -1,0 +1,64 @@
+<p>example works!</p>
+
+
+<div>
+    <li>  {{user.userFirst | titlecase}}</li>
+     <li> {{user.userName | uppercase}}</li>
+     <li>  {{user.salary | currency:'INR'}}</li>
+     <li>  {{user.salary | currency:'GBP'}}</li>
+     <li>  {{user.salary | currency:'EUR'}}</li>
+     <li> {{user.designation | lowercase }} </li>
+     <li>  {{user.dob | date }} </li>
+      
+    </div>
+    <div>
+        {{name|uppercase}} <br>
+        {{name | slice:1:3 }} <br>
+        {{user | json}} <br>
+    <h4>{{5.123 | number:'1.2-3'}}</h4>
+    <h4>{{5.123 | number:'2.2-3'}}</h4>
+    <h4>{{5.123 | number:'4.1-2'}}</h4>
+    <h4>{{5.123 | number:'3.0-1'}}</h4><br>
+    
+    <h4>{{0.25 | percent}}</h4><br>
+    <h4>{{.5 | percent}}</h4><br>
+    
+    </div>
+    <div>
+        {{name1 | titlecase}} <br>
+        {{name2 | uppercase}}
+    </div> <br>
+    
+    <div>
+        {{date1 | date}} <br>
+        {{date1}} <br>
+        {{date1 | date:'short'}} <br>
+        {{date1 | date:'MMMM dd,yyyy'}} <br>
+        {{date1 | date:'shortDate'}} <br>
+        {{date1 | date:'shortTime'}} <br>
+        {{date1 | date:'medium'}} <br>
+        {{date1 | date:'mediumDate'}} <br>
+        {{date1 | date:'mediumTime'}} <br>
+        {{date1 | date:'longDate'}} <br>
+        {{date1 | date:'longTime'}} <br>
+    </div>
+    <div>
+        <h4>Custom pipes</h4>
+        <!-- {{custom | pipes}} -->
+    </div>
+    <div>
+        <h4>Chaining Pipes</h4>
+        {{user | json | uppercase}} <br>
+        <li>  {{user.dob | date:"MMMM d, yy" | uppercase}} </li>
+    </div><br><br><br>
+    
+    
+    <div>
+        {{countries}} <br>
+    
+        <input type="text" value="" #temp>
+        <button (click)="addCountry(temp.value)" type="button">Add Country</button><br>
+        <p>{{country | pipes}}</p>
+    
+    </div>
+    
